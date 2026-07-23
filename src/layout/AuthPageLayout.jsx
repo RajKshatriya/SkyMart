@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import MagicRings from '../Effects/MagicRings';
+import MagicRings from '../effects/MagicRings';
 
 export const AuthPageLayout = () => {
   return (

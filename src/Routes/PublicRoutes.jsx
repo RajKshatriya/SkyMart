@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router';
-import { useAuthContext } from '../Context/AuthContext';
+import { useAuthContext } from '../context/AuthContext';
 
 const PublicRoutes = () => {
-  const { loggedInUser } = useAuthContext();
+    const { loggedInUser } = useAuthContext();
 
-  return loggedInUser ? <Navigate to="/main" replace /> : <Outlet />;
+    return loggedInUser ? <Navigate to="/main" replace /> : <Outlet />;
 };
 
 export default PublicRoutes;

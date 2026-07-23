@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
 import { useForm } from 'react-hook-form';
-import { AuthContext } from '../Context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
@@ -21,7 +21,7 @@ const SignUpPage = () => {
 
   const formSubmit = (data) => {
     let arr = [...registeredUsers, data]
-    
+
     setRegisteredUsers(arr);
     toast.success("User registered successfully");
     localStorage.setItem('registeredUsers', JSON.stringify(arr));
@@ -32,7 +32,7 @@ const SignUpPage = () => {
 
   return (
     <div className="min-h-screen w-full text-white flex flex-col items-center justify-center p-4 font-['Syne']">
-      
+
       <Link to="/" className="flex items-center gap-2.5 font-bold text-xl tracking-tight mb-8">
         <div className="bg-[#c8f400] p-2 rounded-xl text-[#0e0e0e] flex items-center justify-center">
           <svg

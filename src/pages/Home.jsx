@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight, Package, TrendingUp, Star, Tag, ShoppingBag, Zap, ShieldCheck, Tag as PriceTag } from 'lucide-react';
 import { useContext } from 'react';
-import { AuthContext } from '../Context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 const categories = [
   { id: 1, name: 'Electronics', count: 17, icon: '💻' },
   { id: 2, name: 'Clothing', count: 2, icon: '📦' },
@@ -26,23 +26,23 @@ const newArrivalsProducts = [
 ];
 
 const Home = () => {
-    let {loggedInUser} = useContext(AuthContext);
+  let { loggedInUser } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen  text-white p-4 sm:p-6 lg:p-10 font-[Syne]">
       <div className="max-w-6xl mx-auto space-y-4 sm:space-y-6">
-        
+
         <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white bg-transparent p-5 sm:p-8 lg:p-12">
-          
-          <div 
-            className="absolute inset-0 opacity-15 pointer-events-none" 
+
+          <div
+            className="absolute inset-0 opacity-15 pointer-events-none"
             style={{
               backgroundImage: "linear-gradient(rgb(200, 244, 0) 1px, transparent 1px), linear-gradient(90deg, rgb(200, 244, 0) 1px, transparent 1px)",
               backgroundSize: "40px 40px"
             }}
           />
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-            
+
             <div className="max-w-xl space-y-4">
               <div className="flex items-center font-[DM] gap-2 text-xs font-light uppercase tracking-wider text-[#c6f605]">
                 <span>GOOD EVENING</span>
@@ -69,11 +69,11 @@ const Home = () => {
                 >
                   View All Products
                 </Link>
-              </div>  
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-auto min-w-[180px]">
-              
+
               <div className="flex-1 bg-[#18220a] border border-[#445119] rounded-2xl p-5 text-center">
                 <span className="block text-2xl font-black text-[#c6f605]">20+</span>
                 <span className="text-xs text-slate-400 font-medium">Products Available</span>
@@ -89,7 +89,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
+
           <div className="flex items-center gap-4 border border-white p-5 rounded-2xl">
             <div className="p-3 rounded-xl bg-slate-900 text-[#c6f605] border border-slate-800">
               <Package className="w-5 h-5" />
@@ -140,8 +140,8 @@ const Home = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-white font-[Syne]">
               Shop by Category
             </h2>
-            <Link 
-              to="/main/products" 
+            <Link
+              to="/main/products"
               className="flex items-center gap-1.5 text-sm font-medium text-[#c6f605] hover:text-[#b0dc00] transition-colors"
             >
               View All
@@ -171,7 +171,7 @@ const Home = () => {
         </section>
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
-          
+
           <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
             <div>
 
@@ -236,7 +236,7 @@ const Home = () => {
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-          
+
           <div className="flex items-center gap-4 border border-white bg-[#121212] p-6 rounded-2xl">
             <Zap className="w-6 h-6 text-[#c6f605] flex-shrink-0" />
             <div>
@@ -261,7 +261,7 @@ const Home = () => {
             </div>
           </div>
 
-        </section>        
+        </section>
 
 
       </div>

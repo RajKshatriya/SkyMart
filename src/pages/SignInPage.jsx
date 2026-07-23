@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 import { useForm } from 'react-hook-form';
-import { useAuthContext } from '../Context/AuthContext';
+import { useAuthContext } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 
 const SignInPage = () => {
   const { loggedInUser, setLoggedInUser, registeredUsers } = useAuthContext();
   const [showPassword, setShowPassword] = useState(false);
   let navigate = useNavigate();
-  
+
   const {
     register,
     handleSubmit,
@@ -27,7 +27,7 @@ const SignInPage = () => {
       return;
     }
     setLoggedInUser(user);
-    localStorage.setItem("LoggedInUser", JSON.stringify(user));   
+    localStorage.setItem("LoggedInUser", JSON.stringify(user));
     toast.success(" logged in successfully");
     navigate("/main");
     reset();

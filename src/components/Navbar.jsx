@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { NavLink, Link, useNavigate } from "react-router";
 import { useCart } from "../context/CartContext";
-import { AuthContext } from "../Context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 const navLinkStyles = ({ isActive }) =>
-  `hover:text-white cursor-pointer transition-colors ${
-    isActive ? "text-[#c6f605]" : "text-[#878787]"
+  `hover:text-white cursor-pointer transition-colors ${isActive ? "text-[#c6f605]" : "text-[#878787]"
   }`;
 
 const Navbar = ({ setShowCart }) => {
