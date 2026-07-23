@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@Font-face {
+  font-family: "Syne";
+  src: url("./font/Syne-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM";
+  src: url("./font/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  /* font-weight: bold; */
+}
+
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
